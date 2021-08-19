@@ -1,0 +1,33 @@
+    {% extends "layout.html" %}
+
+    {% set bodyId = "page-ideias"%}
+
+    {% block title %}
+        <title>Ideias - Casa Criativa</title>
+    {% endblock %}
+
+    {% block content %}
+   
+    <header>
+        <h1>Casa Criativa</h1>
+        <p>Ideias para Quarentena</p>
+        <nav>
+            <li><a href="/">Início</a></li>            
+            <li><a href="#" class="button" onclick="onOff()">Nova Ideia</a></li>
+        </nav>
+    </header>
+        <section id="title"> 
+            <p>em exibição</p>
+            <h1>Ideias</h1>       
+        </section>    
+        <main>
+            <section id="ideias">
+                {% include "all_ideas.html" %}    
+            </section>            
+        </main>
+        <footer>
+            Com ❤<a href="https://rocketseat.com.br/">RocketSet</a> 
+        </footer>
+
+    {% endblock %}
+   
