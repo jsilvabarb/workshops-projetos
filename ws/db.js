@@ -26,13 +26,13 @@ const query = `
                 link
         ) VALUES (?, ?, ?, ?, ?);
     `
-    const values = [
-        "https://image.flaticon.com/icons/svg/1688/1688400.svg",
-        "Cursos de Programação",
-        "Estudo",
-        " Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-        "https://rocketseat.com.br/"
-    ]
+    // const values = [
+    //     "https://image.flaticon.com/icons/svg/1688/1688400.svg",
+    //     "Cursos de Programação",
+    //     "Estudo",
+    //     " Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    //     "https://rocketseat.com.br/"
+    // ]
     db.run(query, values, function(err) {
         if(err) return console.log(err)
 
@@ -41,18 +41,18 @@ const query = `
 
 //     //Deletar um dado da tabela 
 
-    // db.run(`DELETE FROM ideas WHERE id = ?`, [1] [2] [3], function(err) {
-    //     if(err) return console.log(err)
+    db.run(`DELETE FROM ideas WHERE id = ?`, [5], function(err) {
+        if(err) return console.log(err)
 
-    //     console.log("DELETEI", this)
-    // })
+        console.log("DELETEI", this)
+    })
 
-//     //Consultar dados na tabela 
-//     db.all(`SELECT * FROM ideas `, function(err, rows) {
-//         if(err) return console.log(err)
+    //Consultar dados na tabela 
+    db.all(`SELECT * FROM ideas `, function(err, rows) {
+        if(err) return console.log(err)
 
-//         console.log(rows)
-//     })
+        console.log(rows)
+    })
 
 
 })
