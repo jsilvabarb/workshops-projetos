@@ -46,7 +46,7 @@ a:hover {
     text-decoration: underline;
 }
 
-a.button {
+.button {
     background-color: #ff5E84;
     color: white;
     border: none; 
@@ -56,17 +56,14 @@ a.button {
     width: 150px;
     height: 40px;
 
-    border-radius: 8px;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
-    transition: 400ms;
-    
+    transition: 400ms;    
 }
 
-a.button:hover {
+ .button:hover {
 
     background-color: #0984e3;
     text-decoration: none;
@@ -193,14 +190,14 @@ footer a{
     top: 0;
     bottom: 0;
     right: 0;
-    left: 0;
-    
-    
+    left: 0; 
     
     display: flex;
     justify-content: center; /*Alinha o conteúdo ao centro pelo eixo X*/
-
     box-sizing: border-box; 
+
+    overflow-y: auto;
+    padding-bottom: 10px;
 
     transition: 400ms;
 
@@ -231,6 +228,7 @@ footer a{
     grid-template-columns: 1fr 1fr ;
 
     gap: 20px;
+    padding-bottom: 100px;
 
 }
 
